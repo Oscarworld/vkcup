@@ -1,0 +1,38 @@
+final class {{ module_info.name }}Presenter {
+
+    // MARK: - VIPER
+
+    var interactor: {{ module_info.name }}InteractorInput!
+    var router: {{ module_info.name }}RouterInput!
+
+	weak var view: {{ module_info.name }}ViewInput?
+
+    // MARK: - Init data
+
+    init() { }
+}
+
+// MARK: - {{ module_info.name }}ViewOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+	func setupView() { }
+}
+
+// MARK: - {{ module_info.name }}InteractorOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput { }
+
+// MARK: - Localized
+
+private extension {{ module_info.name }}Presenter {
+    enum Localized {
+    // swiftlint:disable line_length
+    // swiftlint:enable line_length
+    }
+}
+
+// MARK: - Constants
+
+private extension {{ module_info.name }}Presenter {
+    enum Constants { }
+}
