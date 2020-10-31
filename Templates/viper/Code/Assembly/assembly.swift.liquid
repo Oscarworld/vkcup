@@ -1,0 +1,25 @@
+import UIKit
+
+enum {{ module_info.name }}Assembly {
+    static func makeModule() -> UIViewController {
+        let view = {{ module_info.name }}ViewController()
+
+        let presenter = {{ module_info.name }}Presenter()
+
+        let interactor = {{ module_info.name }}Interactor()
+
+        let router = {{ module_info.name }}Router()
+
+        view.output = presenter
+
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+
+        interactor.output = presenter
+
+        router.transitionHandler = view
+
+        return view
+    }
+}

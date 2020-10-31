@@ -1,0 +1,23 @@
+### Headers settings
+company: ""
+
+### Xcode project settings
+project_name: final_vkcup
+xcodeproj_path: final_vkcup.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: final_vkcup
+
+# The file path for new modules
+project_file_path: final_vkcup/Sources/Modules
+
+# The Xcode group path to new modules
+project_group_path: final_vkcup/Sources/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: viper, local: 'Templates/viper'}
